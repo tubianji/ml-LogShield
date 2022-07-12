@@ -8,4 +8,7 @@ Type=simple
 User=root
 WorkingDirectory=/etc/logshield
 ExecStart=node . 2>&1 | tee -a /etc/logshield/log/logshield.log
-Res
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
