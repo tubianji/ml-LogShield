@@ -339,3 +339,379 @@
     {
       "id": 58,
       "reg": "<!--\\W*?#\\W*?(cmd|echo|exec|include|printenv)\\b",
+      "type": 6,
+      "cmt": "Apache server-side include"
+    },
+    {
+      "id": 59,
+      "reg": "\\{\\s*\\w+\\s*:\\s*[+-]?\\s*\\d+\\s*:.*?\\}",
+      "type": 5,
+      "cmt": "Serialized PHP objects"
+    },
+    {
+      "id": 60,
+      "reg": "[\\n\\r]\\s*\\b(?:to|b?cc)\\b\\s*:.*?\\@",
+      "type": 5,
+      "cmt": "Email injection"
+    },
+    {
+      "id": 61,
+      "reg": "\\bcall_user_func\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"call_user_func\""
+    },
+    {
+      "id": 62,
+      "reg": "\\bcreate_function\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"create_function\""
+    },
+    {
+      "id": 63,
+      "reg": "\\beval\\b.*?(\\(.+?\\)|\\{.+?\\})",
+      "type": 4,
+      "cmt": "Critical function \"eval\""
+    },
+    {
+      "id": 64,
+      "reg": "\\bexec\\b.*?\\(.+?\\)",
+      "type": 4,
+      "cmt": "Critical PHP function \"exec\""
+    },
+    {
+      "id": 65,
+      "reg": "\\bf(get|open|read|write)\\b.*?\\(.+?\\)",
+      "type": 5,
+      "cmt": "Critical PHP function \"fopen/fget/fread/fwrite\""
+    },
+    {
+      "id": 66,
+      "reg": "\\bfile_(get|put)_contents\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"file_get_contents/file_put_contents\""
+    },
+    {
+      "id": 67,
+      "reg": "\\bmove_uploaded_file\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"move_uploaded_file\""
+    },
+    {
+      "id": 68,
+      "reg": "\\bpassthru\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"passthru\""
+    },
+    {
+      "id": 69,
+      "reg": "\\bp(roc_)?open\\b.*?\\(.+?\\)",
+      "type": 6,
+      "cmt": "Critical PHP function \"popen/proc_open\""
+    },
+    {
+      "id": 70,
+      "reg": "\\breadfile\\b.*?\\(.+?\\)",
+      "type": 5,
+      "cmt": "Critical PHP function \"readfile\""
+    },
+    {
+      "id": 71,
+      "reg": "\\bshell_exec\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"shell_exec\""
+    },
+    {
+      "id": 72,
+      "reg": "\\bsystem\\b.*?\\(.+?\\)",
+      "type": 5,
+      "cmt": "Critical PHP function \"system\""
+    },
+    {
+      "id": 73,
+      "reg": "\\bpreg_(replace|match)\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "Critical PHP function \"preg_match/preg_replace\""
+    },
+    {
+      "id": 74,
+      "reg": "\\binclude(_once)?\\b.*?;",
+      "type": 4,
+      "cmt": "Critical PHP function \"include\""
+    },
+    {
+      "id": 75,
+      "reg": "\\brequire(_once)?\\b.*?;",
+      "type": 4,
+      "cmt": "Critical PHP function \"require\""
+    },
+    {
+      "id": 76,
+      "reg": "\\{\\s*\\$\\s*\\{.+?\\}\\s*\\}",
+      "type": 8,
+      "cmt": "PHP complex curly syntax"
+    },
+    {
+      "id": 77,
+      "reg": "@(cc_on|set)\\b",
+      "type": 3,
+      "cmt": "Conditional compilation token"
+    },
+    {
+      "id": 78,
+      "reg": "\\bfirefoxurl\\s*:",
+      "type": 3,
+      "cmt": "Firefox \"firefoxurl\" URI handler"
+    },
+    {
+      "id": 79,
+      "reg": "\\bwyciwyg\\s*:",
+      "type": 3,
+      "cmt": "Firefox \"wyciwyg\" URI handler"
+    },
+    {
+      "id": 80,
+      "reg": "\\bdocument\\b.*?\\.",
+      "type": 2,
+      "cmt": "JavaScript attribute \"document\""
+    },
+    {
+      "id": 81,
+      "reg": "\\bwindow\\b.*?\\.",
+      "type": 2,
+      "cmt": "JavaScript attribute \"window\""
+    },
+    {
+      "id": 82,
+      "reg": "=\\s*\\w+\\s*\\+\\s*['\"]",
+      "type": 1,
+      "cmt": "Common concatenation pattern"
+    },
+    {
+      "id": 83,
+      "reg": "\\+=\\s*\\(\\s*['\"]",
+      "type": 1,
+      "cmt": "Common concatenation pattern"
+    },
+    {
+      "id": 84,
+      "reg": "['\"]\\s*\\+\\s*['\"]",
+      "type": 1,
+      "cmt": "Common concatenation pattern"
+    },
+    {
+      "id": 85,
+      "reg": "\\|\\(\\w+=",
+      "type": 3,
+      "cmt": "LDAP"
+    },
+    {
+      "id": 86,
+      "reg": "\\bfunction\\b[^(]*\\([^)]*\\)",
+      "type": 3,
+      "cmt": "Common function declaration"
+    },
+    {
+      "id": 87,
+      "reg": "\\bbenchmark\\b.*?\\(.+?,.+?\\)",
+      "type": 8,
+      "cmt": "Blind MySQL \"benchmark\""
+    },
+    {
+      "id": 88,
+      "reg": "\\bsleep\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Blind SQL \"sleep\""
+    },
+    {
+      "id": 89,
+      "reg": "\\bload_file\\b.*?\\(.+?\\)",
+      "type": 7,
+      "cmt": "MySQL file disclosure \"load_file\""
+    },
+    {
+      "id": 90,
+      "reg": "\\bload\\b.*?\\bdata\\b.*?\\binfile\\b.*?\\binto\\b.*?\\btable\\b",
+      "type": 7,
+      "cmt": "MySQL file disclosure \"load data\""
+    },
+    {
+      "id": 91,
+      "reg": "\\bselect\\b.*?\\binto\\b.*?\\b(out|dump)file\\b",
+      "type": 8,
+      "cmt": "MySQL file write \"into outfile\""
+    },
+    {
+      "id": 92,
+      "reg": "\\b(group_)?concat(_ws)?\\b.*?\\(.+?\\)",
+      "type": 3,
+      "cmt": "MySQL function \"concat\""
+    },
+    {
+      "id": 93,
+      "reg": "\\binformation_schema\\b",
+      "type": 5,
+      "cmt": "MySQL information disclosure"
+    },
+    {
+      "id": 94,
+      "reg": "\\bpg_sleep\\b.*?\\(.+?\\)",
+      "type": 6,
+      "cmt": "Blind PgSQL \"pg_sleep\""
+    },
+    {
+      "id": 95,
+      "reg": "\\bwaitfor\\b.*?\\b(delay|time(out)?)\\b",
+      "type": 4,
+      "cmt": "Blind TSQL \"waitfor\""
+    },
+    {
+      "id": 96,
+      "reg": "\\b(char_|bit_)?length\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"length\""
+    },
+    {
+      "id": 97,
+      "reg": "\\b(un)?hex\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"hex/unhex\""
+    },
+    {
+      "id": 98,
+      "reg": "\\b(from|to)_base64\\b.*?\\(.+?\\)",
+      "type": 4,
+      "cmt": "Common MySQL function \"from_base64/to_base64\""
+    },
+    {
+      "id": 99,
+      "reg": "\\bsubstr(ing(_index)?)?\\b.*?\\(.+?,.+?\\)",
+      "type": 3,
+      "cmt": "Common SQL function \"substr\""
+    },
+    {
+      "id": 100,
+      "reg": "\\b(current_)?user\\b.*?\\(.*?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"user\""
+    },
+    {
+      "id": 101,
+      "reg": "\\bversion\\b.*?\\(.*?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"version\""
+    },
+    {
+      "id": 102,
+      "reg": "@@.+?",
+      "type": 1,
+      "cmt": "SQL system variable"
+    },
+    {
+      "id": 103,
+      "reg": "\\boct\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"oct\""
+    },
+    {
+      "id": 104,
+      "reg": "\\bord\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"ord\""
+    },
+    {
+      "id": 105,
+      "reg": "\\bascii\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"ascii\""
+    },
+    {
+      "id": 106,
+      "reg": "\\bbin\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"bin\""
+    },
+    {
+      "id": 107,
+      "reg": "\\bcha?r\\b.*?\\(.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"char\""
+    },
+    {
+      "id": 108,
+      "reg": "\\bwhere\\b.+?(\\b(not_)?(like|regexp)\\b|[=<>])",
+      "type": 2,
+      "cmt": "Common SQL comparison \"where\""
+    },
+    {
+      "id": 109,
+      "reg": "\\bif\\b.*?\\(.+?,.+?,.+?\\)",
+      "type": 2,
+      "cmt": "Common SQL comparison \"if\""
+    },
+    {
+      "id": 110,
+      "reg": "\\b(ifnull|nullif)\\b.*?\\(.+?,.+?\\)",
+      "type": 3,
+      "cmt": "Common SQL comparison \"ifnull\""
+    },
+    {
+      "id": 111,
+      "reg": "\\bwhere\\b.+?(\\b(n?and|x?or|not)\\b|(\\&\\&|\\|\\|))",
+      "type": 3,
+      "cmt": "Common SQL comparison \"where\""
+    },
+    {
+      "id": 112,
+      "reg": "\\bcase\\b.+?\\bwhen\\b.+?\\bend\\b",
+      "type": 4,
+      "cmt": "Common SQL comparison \"case\""
+    },
+    {
+      "id": 113,
+      "reg": "\\bexec\\b.+?\\bxp_cmdshell\\b",
+      "type": 9,
+      "cmt": "MSSQL code execution \"xp_cmdshell\""
+    },
+    {
+      "id": 114,
+      "reg": "\\bcreate\\b.+?\\b(procedure|function)\\b.*?\\(.*?\\)",
+      "type": 4,
+      "cmt": "Common SQL command \"create\""
+    },
+    {
+      "id": 115,
+      "reg": "\\binsert\\b.+?\\binto\\b.*?\\bvalues\\b.*?\\(.+?\\)",
+      "type": 5,
+      "cmt": "Common SQL command \"insert\""
+    },
+    {
+      "id": 116,
+      "reg": "\\bselect\\b.+?\\bfrom\\b",
+      "type": 3,
+      "cmt": "Common SQL command \"select\""
+    },
+    {
+      "id": 117,
+      "reg": "\\bpg_user\\b",
+      "type": 7,
+      "cmt": "PgSQL information disclosure \"pg_user\""
+    },
+    {
+      "id": 118,
+      "reg": "\\bpg_database\\b",
+      "type": 7,
+      "cmt": "PgSQL information disclosure \"pg_database\""
+    },
+    {
+      "id": 119,
+      "reg": "\\bpg_shadow\\b",
+      "type": 7,
+      "cmt": "PgSQL information disclosure \"pg_shadow\""
+    },
+    {
+      "id": 120,
+      "reg": "\\b(current_)?database\\b.*?\\(.*?\\)",
+      "type": 2,
+      "cmt": "Common SQL function \"database\""
+    }
+  ]
