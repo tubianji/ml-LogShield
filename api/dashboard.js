@@ -19,4 +19,22 @@ module.exports = (router, client, checkAuth) => {
             },
             "ping": {
                 "AVGServerPing": `${await AVGServerPing()}ms`,
-         
+                "Upload": bandwidth.totalUpload(),
+                "Download": bandwidth.totalDownload(),
+                "AvgUploadSize": bandwidth.avgUploadSize(),
+                "AvgDownloadSize": bandwidth.avgDownloadSize(),
+            },
+            "rpm": {
+                "requestsPerMinute": {
+                    "total": TotalRpm().allowedrpm,
+                    "allowed": TotalRpm().allowedrpm,
+                    "blocked": TotalRpm().blockedrpm,
+                }
+            },
+            "process": {
+                "memoryUsage": processStats.memory,
+                "cpuUsage": processStats.cpu,
+                "uptime": process.uptime(),
+            },
+            "system": {
+                "uptime": os
