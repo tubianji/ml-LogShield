@@ -37,4 +37,14 @@ module.exports = (router, client, checkAuth) => {
                 "uptime": process.uptime(),
             },
             "system": {
-                "uptime": os
+                "uptime": os.uptime(),
+                "loadavg": os.loadavg(),
+                "totalmem": os.totalmem(),
+                "freemem": os.freemem(),
+                "cpus": os.cpus(),
+                "networkInterfaces": os.networkInterfaces(),
+            },
+        }
+        res.send(data);
+    });
+};
