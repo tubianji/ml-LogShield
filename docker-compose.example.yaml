@@ -15,4 +15,11 @@ services:
       - 'Redis_Host=redis'
       - 'Redis_Port=6379'
       - 'Session_Time=30'
-      - 'Max_Requests=10
+      - 'Max_Requests=100000'
+      - 'Reset_Interval=1'
+      - 'BlockDuration=2'
+    ports:
+      - '7000:7000'
+  redis:
+    container_name: redis
+    image: redis:alpine
