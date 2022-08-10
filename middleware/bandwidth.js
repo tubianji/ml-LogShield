@@ -31,4 +31,23 @@ router.use((req, res, next) => {
 
   const originalWrite = res.write;
   const originalEnd = res.end;
-  l
+  let responseSize = 0;
+
+  res.write = function (chunk) {
+    responseSize += chunk.length;
+    originalWrite.apply(this, arguments);
+  };
+
+  res.end = function (chunk) {
+    if (chunk) {
+      responseSize += chunk.length;
+    }
+    totalDownload += responseSize;
+    originalEnd.apply(this, arguments);
+  };
+
+  next();
+});
+
+module.exports = router;
+module.exports.bandwidth = bandwidth;
