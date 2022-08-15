@@ -169,3 +169,30 @@ const row2 = new ActionRowBuilder()
     await channel.send({ embeds: [embed], components: [row1, row2] }).then(async () => {
       console.log(`[LOG] ${plugin} log created!`);
     }).catch((err) => {
+      console.warn(`[LOG] ${plugin} log failed to create!`);
+      console.warn(`[LOG] Error from Discord API: ${err}`);
+    });
+}
+
+function generateTopCountriesDescription(topCountries) {
+  let description = '';
+  topCountries.forEach(([countryCity, count], index) => {
+    description += `**${index + 1}. ${countryCity}:** ${count} suspicious IP(s)\n`;
+  });
+  return description;
+}
+
+function generateDataValue(data) {
+  if (data.length > 0) {
+    if (data.length > 15) {
+      const remainingCount = data.length - 15;
+      return '```' + data.slice(0, 15).join(', ') + ` + ${remainingCount} more` + '```';
+    } else {
+      return '```' + data.join(', ') + '```';
+    }
+  } else {
+    return 'No potential malicious activities detected';
+  }
+}
+
+module.exports = { CreateLog };
