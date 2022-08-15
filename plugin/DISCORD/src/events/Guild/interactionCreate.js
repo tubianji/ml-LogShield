@@ -52,4 +52,30 @@ client.on("interactionCreate", async (interaction) => {
         embeds: [
           new EmbedBuilder()
             .setDescription(
-              `🚫 Unfortunat
+              `🚫 Unfortunately, you can't run this command. You need the following permissions: \n \`${command.permissions}\``
+            )
+            .setColor("Red"),
+        ],
+      });
+  }
+  try {
+    if (
+      !interaction.guild.members.me.permissions.has(
+        PermissionsBitField.resolve("SendMessages")
+      )
+    )
+      return;
+    if (
+      !interaction.guild.members.me.permissions.has(
+        PermissionsBitField.resolve("EmbedLinks")
+      )
+    ) {
+      return interaction.reply({
+        content:
+          "Dear human, I lack some permissions! I need the `Embed Links` permission to run this command!",
+      });
+    }
+
+    await command.execute(interaction);
+  } catch (error) {
+    console.erro
