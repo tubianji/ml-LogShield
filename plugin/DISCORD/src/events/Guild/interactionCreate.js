@@ -78,4 +78,17 @@ client.on("interactionCreate", async (interaction) => {
 
     await command.execute(interaction);
   } catch (error) {
-    console.erro
+    console.error(error);
+    return interaction
+      .reply({
+        embeds: [
+          new EmbedBuilder()
+            .setColor("Red")
+            .setDescription(
+              `🚫 An error has occurred while executing this command | **/${command.name}** \n\n Please report this error to the developer of this bot.`
+            ),
+        ],
+      })
+      .catch((err) => {});
+  }
+});
