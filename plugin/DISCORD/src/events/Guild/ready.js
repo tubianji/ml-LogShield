@@ -10,3 +10,7 @@ client.on('ready', async (client) => {
   client.user.setPresence({
     activities: [{ name: `LogShield | Shard: 1 `, type: ActivityType.Watching }]
   });
+
+  //REGISTER SLASH COMMANDS
+  require("../../slashRegister.js").run(client);
+})
