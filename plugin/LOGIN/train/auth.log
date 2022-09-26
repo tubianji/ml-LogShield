@@ -22,4 +22,11 @@ May 14 00:08:34 frostproxy sshd[149613]: Invalid user cesar from 188.166.180.17 
 May 14 00:08:34 frostproxy sshd[149613]: pam_unix(sshd:auth): check pass; user unknown
 May 14 00:08:34 frostproxy sshd[149613]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=188.166.180.17 
 May 14 00:08:36 frostproxy sshd[149613]: Failed password for invalid user cesar from 188.166.180.17 port 47762 ssh2180.101.88.247
-May 14 00:08:36 frostproxy sshd[149613]: Received disconnect from 188.166.180.17 port 47762:11: Bye Bye [p
+May 14 00:08:36 frostproxy sshd[149613]: Received disconnect from 188.166.180.17 port 47762:11: Bye Bye [preauth]
+May 14 00:08:36 frostproxy sshd[149613]: Disconnected from invalid user cesar 188.166.180.17 port 47762 [preauth]
+May 14 00:08:39 frostproxy sshd[149615]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=150.188.18.195  user=root
+May 14 00:08:41 frostproxy sshd[149617]: Invalid user oracle from 188.166.225.37 port 49252
+May 14 00:08:41 frostproxy sshd[149617]: pam_unix(sshd:auth): check pass; user unknown
+May 14 00:08:41 frostproxy sshd[149617]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=188.166.225.37 
+May 14 00:08:41 frostproxy sshd[149615]: Failed password for root from 150.188.18.195 port 48446 ssh2
+May 14 00:08
