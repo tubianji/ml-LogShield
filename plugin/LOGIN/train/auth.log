@@ -67,4 +67,11 @@ May 14 00:11:23 frostproxy sshd[149682]: Disconnected from invalid user student1
 May 14 00:11:25 frostproxy sshd[149684]: Received disconnect from 165.232.190.137 port 59492:11: Bye Bye [preauth]
 May 14 00:11:25 frostproxy sshd[149684]: Disconnected from authenticating user root 165.232.190.137 port 59492 [preauth]
 May 14 00:11:26 frostproxy sshd[149678]: Failed password for root from 218.92.0.118 port 49261 ssh2
-May 14 00:11:27 frostproxy sshd[149678]: Received disconnect from 218.92
+May 14 00:11:27 frostproxy sshd[149678]: Received disconnect from 218.92.0.118 port 49261:11:  [preauth]
+May 14 00:11:27 frostproxy sshd[149678]: Disconnected from authenticating user root 218.92.0.118 port 49261 [preauth]
+May 14 00:11:27 frostproxy sshd[149678]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.92.0.118  user=root
+May 14 00:11:28 frostproxy sshd[149686]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.92.0.118  user=root
+May 14 00:11:30 frostproxy sshd[149686]: Failed password for root from 218.92.0.118 port 24169 ssh2
+May 14 00:11:31 frostproxy sshd[149690]: Invalid user seafile from 157.230.55.156 port 59828
+May 14 00:11:31 frostproxy sshd[149690]: pam_unix(sshd:auth): check pass; user unknown
+May 14 00:11:31
