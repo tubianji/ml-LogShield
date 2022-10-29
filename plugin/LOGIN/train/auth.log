@@ -61,4 +61,10 @@ May 14 00:11:22 frostproxy sshd[149680]: Received disconnect from 43.156.240.75 
 May 14 00:11:22 frostproxy sshd[149680]: Disconnected from authenticating user root 43.156.240.75 port 45618 [preauth]
 May 14 00:11:22 frostproxy sshd[149678]: Failed password for root from 218.92.0.118 port 49261 ssh2
 May 14 00:11:22 frostproxy sshd[149682]: Failed password for invalid user student1 from 217.29.49.103 port 38830 ssh2
-May 14 00:11:23 frostpro
+May 14 00:11:23 frostproxy sshd[149684]: Failed password for root from 165.232.190.137 port 59492 ssh2
+May 14 00:11:23 frostproxy sshd[149682]: Received disconnect from 217.29.49.103 port 38830:11: Bye Bye [preauth]
+May 14 00:11:23 frostproxy sshd[149682]: Disconnected from invalid user student1 217.29.49.103 port 38830 [preauth]
+May 14 00:11:25 frostproxy sshd[149684]: Received disconnect from 165.232.190.137 port 59492:11: Bye Bye [preauth]
+May 14 00:11:25 frostproxy sshd[149684]: Disconnected from authenticating user root 165.232.190.137 port 59492 [preauth]
+May 14 00:11:26 frostproxy sshd[149678]: Failed password for root from 218.92.0.118 port 49261 ssh2
+May 14 00:11:27 frostproxy sshd[149678]: Received disconnect from 218.92
