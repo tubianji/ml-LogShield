@@ -79,4 +79,11 @@ May 14 00:11:31 frostproxy sshd[149688]: pam_unix(sshd:auth): authentication fai
 May 14 00:11:33 frostproxy sshd[149690]: Failed password for invalid user seafile from 157.230.55.156 port 59828 ssh2
 May 14 00:11:33 frostproxy sshd[149688]: Failed password for root from 218.92.0.118 port 47690 ssh2
 May 14 00:11:33 frostproxy sshd[149690]: Received disconnect from 157.230.55.156 port 59828:11: Bye Bye [preauth]
-May 14 00:11:33 frostproxy sshd[149690]: Disconnected from invalid user seafile 157
+May 14 00:11:33 frostproxy sshd[149690]: Disconnected from invalid user seafile 157.230.55.156 port 59828 [preauth]
+May 14 00:11:34 frostproxy sshd[149686]: Failed password for root from 218.92.0.118 port 24169 ssh2
+May 14 00:11:36 frostproxy sshd[149688]: Failed password for root from 218.92.0.118 port 47690 ssh2
+May 14 00:11:36 frostproxy sshd[149686]: Failed password for root from 218.92.0.118 port 24169 ssh2
+May 14 00:11:38 frostproxy sshd[149686]: Received disconnect from 218.92.0.118 port 24169:11:  [preauth]
+May 14 00:11:48 frostproxy sshd[149697]: Failed password for root from 161.35.208.99 port 51988 ssh2
+May 14 00:11:48 frostproxy sshd[149692]: Received disconnect from 218.92.0.118 port 40928:11:  [preauth]
+May 14 00:11:48 frostproxy sshd[149692]: Disconnected from authenticating u
