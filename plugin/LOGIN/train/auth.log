@@ -86,4 +86,10 @@ May 14 00:11:36 frostproxy sshd[149686]: Failed password for root from 218.92.0.
 May 14 00:11:38 frostproxy sshd[149686]: Received disconnect from 218.92.0.118 port 24169:11:  [preauth]
 May 14 00:11:48 frostproxy sshd[149697]: Failed password for root from 161.35.208.99 port 51988 ssh2
 May 14 00:11:48 frostproxy sshd[149692]: Received disconnect from 218.92.0.118 port 40928:11:  [preauth]
-May 14 00:11:48 frostproxy sshd[149692]: Disconnected from authenticating u
+May 14 00:11:48 frostproxy sshd[149692]: Disconnected from authenticating user root 218.92.0.118 port 40928 [preauth]
+May 14 00:11:48 frostproxy sshd[149692]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.92.0.118  user=root
+May 14 00:11:49 frostproxy sshd[149697]: Received disconnect from 161.35.208.99 port 51988:11: Bye Bye [preauth]
+May 14 00:11:49 frostproxy sshd[149697]: Disconnected from authenticating user root 161.35.208.99 port 51988 [preauth]
+May 14 00:11:50 frostproxy sshd[149695]: Failed password for root from 218.92.0.118 port 12944 ssh2
+May 14 00:11:51 frostproxy sshd[149695]: Received disconnect from 218.92.0.118 port 12944:11:  [preauth]
+May 14 00:11:51 frostproxy sshd[149695]: Disconnecte
