@@ -1,1 +1,6 @@
-May 14 00:07:49 fros
+May 14 00:07:49 frostproxy sshd[149603]: Received disconnect from 43.156.240.75 port 36362:11: Bye Bye [preauth]
+May 14 00:07:49 frostproxy sshd[149603]: Disconnected from invalid user testsftp 43.156.240.75 port 36362 [preauth]
+May 14 00:07:56 frostproxy sshd[149605]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=138.197.215.196  user=root
+May 14 00:07:58 frostproxy sshd[149605]: Failed password for root from 138.197.215.196 port 58084 ssh2
+May 14 00:07:59 frostproxy sshd[149605]: Received disconnect from 138.197.215.196 port 58084:11: Bye Bye [preauth]
+May 14 00:07:59 frostproxy sshd[149605]: Disconnected from authenticating user root 138.197.215.196 port 58084 [p
