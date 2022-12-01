@@ -10,4 +10,10 @@ May 14 00:08:05 frostproxy sshd[149607]: Received disconnect from 217.29.49.103 
 May 14 00:08:05 frostproxy sshd[149607]: Disconnected from authenticating user root 217.29.49.103 port 46112 [preauth]
 May 14 00:08:23 frostproxy sshd[149609]: Invalid user diego from 161.35.208.99 port 53626
 May 14 00:08:23 frostproxy sshd[149609]: pam_unix(sshd:auth): check pass; user unknown
-May 14 00:08:23 frostproxy sshd[149609]: pam_unix(sshd:aut
+May 14 00:08:23 frostproxy sshd[149609]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=161.35.208.99 
+May 14 00:08:25 frostproxy sshd[149609]: Failed password for invalid user diego from 161.35.208.99 port 53626 ssh2
+May 14 00:08:26 frostproxy sshd[149609]: Received disconnect from 161.35.208.99 port 53626:11: Bye Bye [preauth]
+May 14 00:08:26 frostproxy sshd[149609]: Disconnected from invalid user diego 161.35.208.99 port 53626 [preauth]
+May 14 00:08:28 frostproxy sshd[149611]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=157.230.55.156  user=root
+May 14 00:08:30 frostproxy sshd[149611]: Failed password for root from 157.230.55.156 port 37638 ssh2
+May 14 00:08:31 frostproxy ssh
