@@ -35,4 +35,11 @@ May 14 00:08:42 frostproxy sshd[149617]: Failed password for invalid user oracle
 May 14 00:08:43 frostproxy sshd[149617]: Received disconnect from 188.166.225.37 port 49252:11: Bye Bye [preauth]
 May 14 00:08:43 frostproxy sshd[149617]: Disconnected from invalid user oracle 188.166.225.37 port 49252 [preauth]
 May 14 00:08:51 frostproxy sshd[149619]: Invalid user liuxy from 51.159.214.212 port 32816
-May 14 00:08:51 frost
+May 14 00:08:51 frostproxy sshd[149619]: pam_unix(sshd:auth): check pass; user unknown
+May 14 00:10:31 frostproxy sshd[149652]: Failed password for root from 180.101.88.247 port 41995 ssh2
+May 14 00:10:31 frostproxy sshd[149654]: Failed password for root from 180.101.88.247 port 12506 ssh2
+May 14 00:10:31 frostproxy sshd[149656]: Failed password for root from 180.101.88.247 port 60736 ssh2
+May 14 00:10:31 frostproxy sshd[149658]: Failed password for root from 180.101.88.247 port 18536 ssh2
+May 14 00:10:34 frostproxy sshd[149652]: Failed password for root from 180.101.88.247 port 41995 ssh2
+May 14 00:10:34 frostproxy sshd[149654]: Failed password for root from 180.101.88.247 port 12506 ssh2
+May 14 00:10:34 frostproxy sshd[149656]: Failed password
