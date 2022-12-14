@@ -49,4 +49,10 @@ May 14 00:10:27 frostproxy sshd[149654]: Failed password for root from 180.101.8
 May 14 00:10:28 frostproxy sshd[149656]: Failed password for root from 180.101.88.247 port 60736 ssh2
 May 14 00:10:19 frostproxy sshd[149645]: Failed password for root from 180.101.88.247 port 45139 ssh2
 May 14 00:10:21 frostproxy sshd[149647]: Failed password for root from 180.101.88.247 port 37206 ssh2
-May 14 00:10:22 frostproxy sshd[149645]: Failed password for root from 1
+May 14 00:10:22 frostproxy sshd[149645]: Failed password for root from 180.101.88.247 port 45139 ssh2
+May 14 00:11:19 frostproxy sshd[149680]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=43.156.240.75  user=root
+May 14 00:11:19 frostproxy sshd[149678]: Failed password for root from 218.92.0.118 port 49261 ssh2
+May 14 00:11:21 frostproxy sshd[149682]: Invalid user student1 from 217.29.49.103 port 38830
+May 14 00:11:21 frostproxy sshd[149682]: pam_unix(sshd:auth): check pass; user unknown
+May 14 00:11:21 frostproxy sshd[149682]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=217.29.49.103 
+May 14 00:11:21 frostproxy sshd[149680]: Failed password for root from 43.156.240.75 
