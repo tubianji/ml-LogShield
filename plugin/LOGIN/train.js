@@ -36,4 +36,34 @@ function createModel(vocabSize, inputDim) {
 
   model.compile({
     optimizer: "adam",
-    loss: "binaryCrossentropy"
+    loss: "binaryCrossentropy",
+    metrics: ["accuracy"],
+  });
+
+  return model;
+}
+
+
+async function trainModel(model, xs, ys) {
+  const numEpochs = 565;
+  const batchSize = 32;
+
+  await model.fit(xs, ys, {
+    batchSize,
+    epochs: numEpochs,
+    shuffle: true,
+    validationSplit: 0.2,
+    callbacks:{
+      onEpochEnd: async(epoch, logs) =>{
+          console.log("Epoch:" + epoch + " Loss:" + logs.loss * 100);
+      }
+    }
+  });
+  await model.save('file://./model');
+  console.log("Training and model save complete!");
+  return true;
+}
+
+function processSequences(sequences, tokenizer, maxTimeSteps) {
+  const processedSequences = sequences.map((seq) => {
+    const wordIndices = seq.map((token) => tokenizer.wor
