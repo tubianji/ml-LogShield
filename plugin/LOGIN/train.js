@@ -125,3 +125,21 @@ async function main() {
   }
 
   const logEntryPattern = /:\s([^:]+)$/;
+
+  for (const sequence of sequences) {
+    const sequenceTokens = [];
+    let isSuspiciousSequence = 0;
+
+    for (const line of sequence) {
+      const match = line.match(logEntryPattern);
+      if (match) {
+        const action = match[1];
+        let isSuspicious = action.includes("authentication failure") ? 1 : 0;
+        const failedPasswordMatch = line.match(failedPasswordPattern);
+        if (failedPasswordMatch) {
+          const user = failedPasswordMatch[1];
+          const ip = failedPasswordMatch[2];
+          const port = failedPasswordMatch[3];
+          const failedPasswordAttempts = countFailedPasswordAttempts(sequence, user, ip, port);
+          if (failedPasswordAttempts > 3) {
+            isSuspicious = 
