@@ -66,4 +66,32 @@ async function trainModel(model, xs, ys) {
 
 function processSequences(sequences, tokenizer, maxTimeSteps) {
   const processedSequences = sequences.map((seq) => {
-    const wordIndices = seq.map((token) => tokenizer.wor
+    const wordIndices = seq.map((token) => tokenizer.wordIndex[token] || 0);
+
+    let processedSeq = wordIndices;
+    if (processedSeq.length > maxTimeSteps) {
+      processedSeq = processedSeq.slice(0, maxTimeSteps);
+    } else {
+      while (processedSeq.length < maxTimeSteps) {
+        processedSeq.push(0);
+      }
+    }
+
+    return processedSeq;
+  });
+  return tf.tensor2d(processedSequences);
+}
+
+function groupLogLinesByIP(lines) {
+  const ipPattern = /\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/;
+  const logGroups = new Map();
+
+  for (const line of lines) {
+    const match = line.match(ipPattern);
+    if (match) {
+      const ip = match[0];
+
+      if (logGroups.has(ip)) {
+        logGroups.get(ip).push(line);
+      } else {
+        logGroups.set(ip, [line]);
