@@ -95,3 +95,33 @@ function groupLogLinesByIP(lines) {
         logGroups.get(ip).push(line);
       } else {
         logGroups.set(ip, [line]);
+      }
+    }
+  }
+
+  return Array.from(logGroups.values());
+}
+
+async function main() {
+  const data = fs.readFileSync("./plugin/LOGIN/train/auth.log", "utf-8");
+  const lines = data.split("\n");
+
+  const sequences = groupLogLinesByIP(lines);
+
+  const xs = [];
+  const ys = [];
+
+  const failedPasswordPattern = /Failed password for (\w+) from ([\d.]+) port (\d+)/;
+
+  function countFailedPasswordAttempts(sequence, user, ip, port) {
+    let count = 0;
+    for (const line of sequence) {
+      const match = line.match(failedPasswordPattern);
+      if (match && match[1] === user && match[2] === ip && match[3] === port) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  const logEntryPattern = /:\s([^:]+)$/;
