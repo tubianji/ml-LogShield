@@ -142,4 +142,35 @@ async function main() {
           const port = failedPasswordMatch[3];
           const failedPasswordAttempts = countFailedPasswordAttempts(sequence, user, ip, port);
           if (failedPasswordAttempts > 3) {
-            isSuspicious = 
+            isSuspicious = 1;
+          }
+        }
+        const preprocessedText = preprocessText(action);
+        const tokens = tokenizeText(preprocessedText);
+        sequenceTokens.push(...tokens);
+        isSuspiciousSequence = Math.max(isSuspiciousSequence, isSuspicious);
+      }
+    }
+
+    xs.push(sequenceTokens);
+    ys.push(isSuspiciousSequence);
+  }
+
+  const allTexts = [];
+  for (const seq of xs) {
+    for (const text of seq) {
+      allTexts.push(text);
+    }
+  }
+  
+  const tokenizer = { wordIndex: {} };
+  const uniqueWords = new Set();
+  
+  for (const text of allTexts) {
+    const tokens = tokenizeText(text);
+    for (const token of tokens) {
+      uniqueWords.add(token);
+    }
+  }
+  
+  tokenizer.wordIndex = Array.from(uniqueWords).reduce(
