@@ -173,4 +173,24 @@ async function main() {
     }
   }
   
-  tokenizer.wordIndex = Array.from(uniqueWords).reduce(
+  tokenizer.wordIndex = Array.from(uniqueWords).reduce((acc, word, index) => {
+    acc[word] = index + 1;
+    return acc;
+  }, {});
+
+  const maxTimeSteps = xs.reduce(
+    (max, seq) => Math.max(max, seq.reduce(
+      (maxInner, subSeq) => Math.max(maxInner, subSeq.length), 0
+    )), 0
+  );
+  
+  const processedSequences = processSequences(xs, tokenizer, maxTimeSteps);
+  const inputDim = 50;
+  const model = createModel(uniqueWords.size + 1, inputDim);
+
+  const ysTensor = tf.tensor2d(ys, [ys.length, 1]);
+  await trainModel(model, processedSequences, ysTensor);
+  return true;
+}
+
+module.exports = main;
