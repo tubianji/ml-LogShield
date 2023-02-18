@@ -7,4 +7,6 @@
 172.71.190.29 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/logo.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 172.71.190.162 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/js/main.js HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 172.71.190.3 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/js/swiper.min.js HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-172.71.1
+172.71.190.14 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/left-bg-logo.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.190.159 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/icon2.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.190.87 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/Locations-icon-2.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
