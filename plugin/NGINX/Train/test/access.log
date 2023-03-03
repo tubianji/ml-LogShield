@@ -80,4 +80,8 @@
 172.71.190.190 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/f-1.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 172.71.190.146 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/f-3.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 172.71.190.63 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/s-2.png HTTP/2.0" 200 1529 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-172.71.190.93 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/s-3.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/
+172.71.190.93 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/s-3.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.190.8 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/cards-bg.png HTTP/2.0" 200 102630 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.190.95 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/frostproxy-tunnel-3.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.190.47 - - [23/Apr/2023:06:40:11 +0200] "GET /assets/img/get.png HTTP/2.0" 304 0 "https://frostproxy.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+172.71.19
