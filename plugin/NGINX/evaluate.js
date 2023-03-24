@@ -45,4 +45,21 @@ function extractFeatures(parsedLogs) {
 }
 
 async function evaluateAccessLog() {
-    
+    const model = await loadModel();
+    const parsedLogs = parseNginxLogs(accessLogData);
+    const features = extractFeatures(parsedLogs);
+    const dataset = tf.tensor2d(features);
+
+    // Normalize the dataset
+    const { mean, variance } = tf.moments(dataset, 0);
+    const normalizedDataset = dataset.sub(mean).div(variance.sqrt());
+
+    // Predict malicious users
+    const predictions = model.predict(normalizedDataset);
+    const threshold = 0.8;
+    const suspiciousIPs = [];
+
+    predictions.dataSync().forEach((prediction, index) => {
+        if (prediction >= threshold) {
+            if (suspiciousIPs.includes(parsedLogs[index].ip)) return;
+            suspiciousIPs.push(parsedLogs[
