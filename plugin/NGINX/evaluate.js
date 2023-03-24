@@ -20,4 +20,29 @@ function parseNginxLogs(logData) {
                 ip: match[1],
                 timestamp: match[2],
                 method: match[3],
-                uri
+                uri: match[4],
+                protocol: match[5],
+                statusCode: parseInt(match[6], 10),
+                bytesSent: parseInt(match[7], 10),
+                referer: match[8],
+                userAgent: match[9],
+                label: 0 // 0 for legitimate
+            };
+        }
+    });
+
+    return parsedLogs.filter((log) => log !== undefined);
+}
+
+function extractFeatures(parsedLogs) {
+    return parsedLogs.map((log) => {
+        const method = log.method === 'GET' ? 1 : (log.method === 'POST' ? 2 : 0);
+        const statusCode = log.statusCode;
+        const bytesSent = log.bytesSent;
+
+        return [method, statusCode, bytesSent];
+    });
+}
+
+async function evaluateAccessLog() {
+    
