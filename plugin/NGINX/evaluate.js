@@ -62,4 +62,22 @@ async function evaluateAccessLog() {
     predictions.dataSync().forEach((prediction, index) => {
         if (prediction >= threshold) {
             if (suspiciousIPs.includes(parsedLogs[index].ip)) return;
-            suspiciousIPs.push(parsedLogs[
+            suspiciousIPs.push(parsedLogs[index].ip);
+        }
+    })
+        const seeds = [];
+        seeds.push({
+            prediction: (predictions.dataSync()[0] * 100).toFixed(2) + "%",
+            seed: Math.floor(Math.random() * 1000),
+            seedLength: 21,
+            modelLayers: model.layers.map(layer => ({
+                name: layer.name,
+                type: layer.getClassName(),
+                config: layer.getConfig()
+            })),
+        });
+
+        return { suspiciousIPs, seeds };
+}
+
+module.exports = evaluateAccessLog;
