@@ -39,4 +39,21 @@
                 },
                 {
                     "class_name": "Dense",
-      
+                    "config": {
+                        "units": 64,
+                        "activation": "relu",
+                        "use_bias": true,
+                        "kernel_initializer": {
+                            "class_name": "VarianceScaling",
+                            "config": {
+                                "scale": 1,
+                                "mode": "fan_avg",
+                                "distribution": "normal",
+                                "seed": null
+                            }
+                        },
+                        "bias_initializer": {
+                            "class_name": "Zeros",
+                            "config": {}
+                        },
+     
