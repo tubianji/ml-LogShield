@@ -56,4 +56,20 @@
                             "class_name": "Zeros",
                             "config": {}
                         },
-     
+                        "kernel_regularizer": null,
+                        "bias_regularizer": null,
+                        "activity_regularizer": null,
+                        "kernel_constraint": null,
+                        "bias_constraint": null,
+                        "name": "dense_Dense2",
+                        "trainable": true
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config": {
+                        "units": 32,
+                        "activation": "relu",
+                        "use_bias": true,
+                        "kernel_initializer": {
+                            "class_name": "
