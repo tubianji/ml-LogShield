@@ -88,3 +88,20 @@
                         "bias_regularizer": null,
                         "activity_regularizer": null,
                         "kernel_constraint": null,
+                        "bias_constraint": null,
+                        "name": "dense_Dense3",
+                        "trainable": true
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config": {
+                        "units": 1,
+                        "activation": "sigmoid",
+                        "use_bias": true,
+                        "kernel_initializer": {
+                            "class_name": "VarianceScaling",
+                            "config": {
+                                "scale": 1,
+                                "mode": "fan_avg",
+                                "distribution": "norm
