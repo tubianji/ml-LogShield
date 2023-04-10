@@ -123,4 +123,29 @@
                 }
             ]
         },
-        "keras_v
+        "keras_version": "tfjs-layers 4.4.0",
+        "backend": "tensor_flow.js"
+    },
+    "weightsManifest": [
+        {
+            "paths": [
+                "weights.bin"
+            ],
+            "weights": [
+                {
+                    "name": "dense_Dense1/kernel",
+                    "shape": [
+                        3,
+                        128
+                    ],
+                    "dtype": "float32"
+                },
+                {
+                    "name": "dense_Dense1/bias",
+                    "shape": [
+                        128
+                    ],
+                    "dtype": "float32"
+                },
+                {
+                    "name": 
