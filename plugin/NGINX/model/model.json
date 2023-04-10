@@ -148,4 +148,27 @@
                     "dtype": "float32"
                 },
                 {
-                    "name": 
+                    "name": "dense_Dense2/kernel",
+                    "shape": [
+                        128,
+                        64
+                    ],
+                    "dtype": "float32"
+                },
+                {
+                    "name": "dense_Dense2/bias",
+                    "shape": [
+                        64
+                    ],
+                    "dtype": "float32"
+                },
+                {
+                    "name": "dense_Dense3/kernel",
+                    "shape": [
+                        64,
+                        32
+                    ],
+                    "dtype": "float32"
+                },
+                {
+                    "name": "dense_Dense
