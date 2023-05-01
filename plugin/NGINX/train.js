@@ -43,4 +43,24 @@ function parseNginxLogs(logData) {
   }  
 
 const parsedLegitimateLogsArray = accessLogDataArray.map(logData => parseNginxLogs(logData));
-const pa
+const parsedMaliciousLogsArray = maliciousLogDataArray.map(logData => {
+    const logs = parseNginxLogs(logData);
+    return logs.map(log => {
+        log.label = 1; // Set label to 1 for malicious
+        return log;
+    });
+});
+
+const combinedLogsArray = parsedLegitimateLogsArray.map((legitimateLogs, index) => {
+    return legitimateLogs.concat(parsedMaliciousLogsArray[index]);
+});
+
+
+function extractFeatures(parsedLogs) {
+    return parsedLogs
+        .filter(log => log !== undefined)
+        .map((log) => {
+            const method = log.method === 'GET' ? 1 : (log.method === 'POST' ? 2 : 0);
+            const statusCode = log.statusCode;
+            const bytesSent = log.bytesSent;
+            c
