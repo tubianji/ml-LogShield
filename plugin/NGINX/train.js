@@ -63,4 +63,28 @@ function extractFeatures(parsedLogs) {
             const method = log.method === 'GET' ? 1 : (log.method === 'POST' ? 2 : 0);
             const statusCode = log.statusCode;
             const bytesSent = log.bytesSent;
-            c
+            const label = log.label;
+
+            return [method, statusCode, bytesSent, label];
+        });
+}
+
+
+const features = extractFeatures(combinedLogsArray);
+const dataset = tf.tensor2d(features.map(feature => feature.slice(0, -1)));
+
+const splitRatio = 0.8;
+
+const model = tf.sequential();
+model.add(tf.layers.dense({ units: 128, activation: 'relu', inputShape: [dataset.shape[1]] }));
+model.add(tf.layers.dense({ units: 64, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 32, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }));
+
+model.compile({
+    optimizer: tf.train.adam(),
+    loss: tf.losses.sigmoidCrossEntropy,
+    metrics: ['accuracy']
+});
+
+c
