@@ -87,4 +87,23 @@ model.compile({
     metrics: ['accuracy']
 });
 
-c
+const batchSize = 64;
+const epochs = 500;
+async function train(trainDataset, trainLabels) {
+    console.log('Training the model...');
+    await model.fit(trainDataset, trainLabels, {
+        batchSize,
+        epochs,
+        validationSplit: 0.2,
+        shuffle: true,
+        callbacks: tf.callbacks.earlyStopping({ monitor: 'val_loss', patience: 300 }),
+    });
+    console.log('Training completed');
+    await model.save('file://./plugin/NGINX/model');
+}
+
+async function evaluate(testDataset, testLabels) {
+    console.log('Evaluating the model...');
+    const evaluation = await model.evaluate(testDataset, testLabels);
+    const accuracy = (evaluation[1].dataSync()[0] * 100).toFixed(2);
+    const loss
