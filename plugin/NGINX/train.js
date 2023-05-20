@@ -106,4 +106,21 @@ async function evaluate(testDataset, testLabels) {
     console.log('Evaluating the model...');
     const evaluation = await model.evaluate(testDataset, testLabels);
     const accuracy = (evaluation[1].dataSync()[0] * 100).toFixed(2);
-    const loss
+    const loss = evaluation[0].dataSync()[0].toFixed(4);
+    return { accuracy, loss };
+  }
+  
+
+async function processDataset(dataset) {
+    const features = extractFeatures(dataset);
+    const data = tf.tensor2d(features.map((feature) => feature.slice(0, -1)));
+  
+    const trainSize = Math.floor(features.length * splitRatio);
+    const testSize = features.length - trainSize;
+  
+    const trainDataset = data.slice([0, 0], [trainSize, data.shape[1]]);
+    const testDataset = data.slice([trainSize, 0], [testSize, data.shape[1]]);
+  
+    const { mean, variance } = tf.moments(trainDataset, 0);
+    const normalizedTrainDataset = trainDataset.sub(mean).div(variance.sqrt());
+    const normalizedTestDataset = testDataset.sub(mean
