@@ -29,4 +29,4 @@ router.post('/verify-ray', async (req, res) => {
   }
 });
 
-module.ex
+module.exports = { router, generateRayId };
