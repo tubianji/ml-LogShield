@@ -12,4 +12,27 @@ function calculateNonce(prefix, difficulty, startNonce, numWorkers) {
 
     const processChunk = () => {
       for (let i = 0; i < chunkSize; i++) {
-        const currentNonce = nonce + i * num
+        const currentNonce = nonce + i * numWorkers;
+
+        const hash = new TextEncoder()
+          .encode(prefix + currentNonce.toString())
+          .reduce((prev, curr) => prev + ('0' + curr.toString(16)).slice(-2), '');
+        const binaryHash = parseInt(hash, 16).toString(2).padStart(256, '0');
+
+        if (binaryHash.startsWith('0'.repeat(difficulty))) {
+          resolve(currentNonce);
+          return;
+        }
+      }
+
+      nonce += chunkSize * numWorkers;
+      if (nonce % 100000 === 0) {
+        setTimeout(processChunk, 0);
+      } else {
+        processChunk();
+      }
+    };
+
+    processChunk();
+  });
+}
