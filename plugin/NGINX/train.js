@@ -123,4 +123,26 @@ async function processDataset(dataset) {
   
     const { mean, variance } = tf.moments(trainDataset, 0);
     const normalizedTrainDataset = trainDataset.sub(mean).div(variance.sqrt());
-    const normalizedTestDataset = testDataset.sub(mean
+    const normalizedTestDataset = testDataset.sub(mean).div(variance.sqrt());
+  
+    const labels = dataset.map((log) => log.label);
+    const trainLabels = tf.tensor1d(labels.slice(0, trainSize), 'int32');
+    const testLabels = tf.tensor1d(labels.slice(trainSize), 'int32');
+  
+    await train(normalizedTrainDataset, trainLabels);
+    const evaluationResult = await evaluate(normalizedTestDataset, testLabels)
+    console.log(
+      `Test set accuracy: ${evaluationResult.accuracy}% | Loss: ${evaluationResult.loss}`
+    );
+    return evaluationResult;
+  }  
+
+async function main() {
+    for (const dataset of combinedLogsArray) {
+        await processDataset(dataset).then((data) => {
+            return data;
+        });
+    }
+}
+
+module.exports = main;
