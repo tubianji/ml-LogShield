@@ -14,4 +14,10 @@ describe("API Calls", () => {
   test('retrieve API call', async () => {
     const promise = new Promise((resolve, reject) => {
       // This Promise will never reject, so it should never throw an error.
-      resolve('t
+      resolve('test');
+    });
+  
+    await expect(promise).resolves.not.toThrow();
+  });
+  
+});
