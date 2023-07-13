@@ -16,4 +16,21 @@
     </div>
     <p>Your IP address <%= userIp %> has been temporarily banned for suspicious use.</p>
     <div class="container">
-        <div class=
+        <div class="column">
+            <img src="images/img1.png" alt="IP Image">
+            <p class="main">You</p>
+            <p class="sub">IP: <%= userIp %>
+            </p>
+        </div>
+        <img src="images/cross.png" alt="Arrow" class="arrow">
+        <div class="column">
+            <img src="images/img2.png" alt="LogShield Image">
+            <p class="main">LogShield</p>
+            <p class="sub">Edge Network</p>
+        </div>
+        <img src="images/arrow.png" alt="Arrow" class="arrow">
+        <div class="column">
+            <img src="images/img3.png" alt="Destination Image">
+            <p id="destinationDomain" class="main"></p>
+            <p class="sub">Your destination</p>
+        
