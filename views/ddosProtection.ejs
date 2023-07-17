@@ -36,3 +36,23 @@
       <img src="images/img2.png" alt="LogShield Image">
       <p class="main">LogShield</p>
       <p class="sub">Edge Network</p>
+    </div>
+    <img src="images/arrow.png" alt="Arrow" class="arrow">
+    <div class="column">
+      <img src="images/img3.png" alt="Destination Image">
+      <p id="destinationDomain" class="main"></p>
+      <p class="sub">Your destination</p>
+    </div>
+  </div>
+
+  <div class="footer centered-footer">
+    <p>DDOS Protected By LogShield</p>
+    <br>
+    <p>Calculating Ray: <span id="calculatingNonce">...</span></p>
+    <p>Submitting Result: <span id="submittingResult">...</span></p>
+    <p>Redirecting: <span id="redirecting">...</span></p>
+  </div>
+
+  <script>
+    document.getElementById("domain").textContent = window.location.hostname;
+    document.getElementById("destinationDomai
