@@ -66,4 +66,18 @@ const SigninPage = () => {
                       Your Email
                     </label>
                     <input
-                      type=
+                      type="email"
+                      name="email"
+                      placeholder="Enter your Email"
+                      className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    />
+                  </div>
+                  <div className="mb-8">
+                    <label
+                      htmlFor="password"
+                      className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                    >
+                      Your Password
+                    </label>
+                    <input
+                      t
