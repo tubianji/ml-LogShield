@@ -80,4 +80,14 @@ const SigninPage = () => {
                       Your Password
                     </label>
                     <input
-                      t
+                      type="password"
+                      name="password"
+                      placeholder="Enter your Password"
+                      className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                    />
+                  </div>
+                  <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
+                    <div className="mb-4 sm:mb-0">
+                      <label
+                        htmlFor="checkboxLabel"
+                        className="flex cursor-pointer select-none items-center tex
