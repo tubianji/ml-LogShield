@@ -90,4 +90,16 @@ const SigninPage = () => {
                     <div className="mb-4 sm:mb-0">
                       <label
                         htmlFor="checkboxLabel"
-                        className="flex cursor-pointer select-none items-center tex
+                        className="flex cursor-pointer select-none items-center text-sm font-medium text-body-color"
+                      >
+                        <div className="relative">
+                          <input
+                            type="checkbox"
+                            id="checkboxLabel"
+                            className="sr-only"
+                          />
+                          <div className="box mr-4 flex h-5 w-5 items-center justify-center rounded border border-body-color border-opacity-20 dark:border-white dark:border-opacity-10">
+                            <span className="opacity-0">
+                              <svg
+                                width="11"
+                                height="8"
