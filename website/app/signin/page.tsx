@@ -140,4 +140,28 @@ const SigninPage = () => {
                   <Link href="/signup" className="text-primary hover:underline">
                     Sign up
                   </Link>
-         
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-0 left-0 z-[-1]">
+          <svg
+            width="1440"
+            height="969"
+            viewBox="0 0 1440 969"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_95:1005"
+              style={{ maskType: "alpha" }}
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="1440"
+              height="969"
+            >
+              <rect width="1440" height="969" fill="#090E34" />
+            </mask>
+            <g mask="url(#mask
