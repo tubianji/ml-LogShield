@@ -164,4 +164,25 @@ const SigninPage = () => {
             >
               <rect width="1440" height="969" fill="#090E34" />
             </mask>
-            <g mask="url(#mask
+            <g mask="url(#mask0_95:1005)">
+              <path
+                opacity="0.1"
+                d="M1086.96 297.978L632.959 554.978L935.625 535.926L1086.96 297.978Z"
+                fill="url(#paint0_linear_95:1005)"
+              />
+              <path
+                opacity="0.1"
+                d="M1324.5 755.5L1450 687V886.5L1324.5 967.5L-10 288L1324.5 755.5Z"
+                fill="url(#paint1_linear_95:1005)"
+              />
+            </g>
+            <defs>
+              <linearGradient
+                id="paint0_linear_95:1005"
+                x1="1178.4"
+                y1="151.853"
+                x2="780.959"
+                y2="453.581"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor=
