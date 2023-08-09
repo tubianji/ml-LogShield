@@ -125,4 +125,19 @@ const SigninPage = () => {
                         href="#0"
                         className="text-sm font-medium text-primary hover:underline"
                       >
-                     
+                        Forgot Password?
+                      </a>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                      Sign in
+                    </button>
+                  </div>
+                </form>
+                <p className="text-center text-base font-medium text-body-color">
+                  Don’t you have an account?
+                  <Link href="/signup" className="text-primary hover:underline">
+                    Sign up
+                  </Link>
+         
