@@ -41,4 +41,17 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Next.js
                 </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:te
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
+                  consectetur adipiscing elit setim.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSectionTwo;
