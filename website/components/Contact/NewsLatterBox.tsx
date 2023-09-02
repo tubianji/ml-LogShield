@@ -89,4 +89,25 @@ const NewsLatterBox = () => {
           </g>
           <defs>
             <linearGradient
+              id="paint0_linear_88:141"
+              x1="13.4497"
+              y1="63.5059"
+              x2="81.144"
+              y2="41.5072"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="white" />
+              <stop offset="1" stopColor="white" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_88:141"
+              x1="28.1579"
+              y1="501.301"
+              x2="8.69936"
+              y2="464.391"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="white" />
+              <stop offset="1" stopColor="white" stopOpacity="0" />
+            </linearGradient>
            
