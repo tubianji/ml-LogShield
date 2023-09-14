@@ -131,4 +131,25 @@ const NewsLatterBox = () => {
             >
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
-            <
+            </linearGradient>
+            <linearGradient
+              id="paint4_linear_88:141"
+              x1="411.5"
+              y1="-78"
+              x2="411.5"
+              y2="64.9999"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="white" />
+              <stop offset="1" stopColor="white" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint5_linear_88:141"
+              x1="372.5"
+              y1="-69"
+              x2="372.5"
+              y2="73.9999"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="white" />
+              <stop offset="1" stop
