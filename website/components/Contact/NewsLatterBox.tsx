@@ -152,4 +152,24 @@ const NewsLatterBox = () => {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="white" />
-              <stop offset="1" stop
+              <stop offset="1" stopColor="white" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint6_linear_88:141"
+              x1="409.5"
+              y1="-102"
+              x2="409.5"
+              y2="40.9999"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="white" />
+              <stop offset="1" stopColor="white" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+export default NewsLatterBox;
