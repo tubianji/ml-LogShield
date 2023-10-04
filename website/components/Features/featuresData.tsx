@@ -44,4 +44,12 @@ const featuresData: Feature[] = [
     ),
     title: "Next.js 13 (Latest)",
     paragraph:
-      "Tuae na
+      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+  },
+  {
+    id: 1,
+    icon: (
+      <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
+        <path
+          opacity="0.5"
+          d="M31.8943 25.3303C34.1233 25.3303 36.1497 26.1409 37.5682 27.762L39.1464 26.1839C39.4614 25.8689 39.9999 26.092 39.9999 26.5374V32.936C39.9999 33.2121 39.7761 33.436 39.4999 33.436H33.1014C32.6559 33.436 32.4328 32.8974 32.7478 32.5825L35.5418 29.7885C34.5286 28.9779 33.3128 28.37 31.8943 28.37C29.0573 28.37 26.8282 30.599 26.8282 33.436C26.8282 36.273 29.0573 38.5021 31.8943
