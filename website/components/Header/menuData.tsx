@@ -11,4 +11,7 @@ const menuData: Menu[] = [
     id: 2,
     title: "Support",
     path: "/contact",
-   
+    newTab: false,
+  },
+];
+export default menuData;
