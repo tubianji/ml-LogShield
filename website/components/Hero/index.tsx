@@ -85,4 +85,26 @@ const Hero = () => {
               cy="290"
               r="179.5"
               transform="rotate(-30 356 290)"
-           
+              stroke="url(#paint5_linear_25:217)"
+            />
+            <circle
+              opacity="0.8"
+              cx="191.659"
+              cy="302.659"
+              r="133.362"
+              transform="rotate(133.319 191.659 302.659)"
+              fill="url(#paint6_linear_25:217)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_25:217"
+                x1="-54.5003"
+                y1="-178"
+                x2="222"
+                y2="288"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              </linearGradient>
+      
