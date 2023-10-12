@@ -62,4 +62,27 @@ const Hero = () => {
               cx="76.9997"
               cy="288"
               r="34"
-              fill="url(#paint2_ra
+              fill="url(#paint2_radial_25:217)"
+            />
+            <circle
+              cx="325.486"
+              cy="302.87"
+              r="180"
+              transform="rotate(-37.6852 325.486 302.87)"
+              fill="url(#paint3_linear_25:217)"
+            />
+            <circle
+              opacity="0.8"
+              cx="184.521"
+              cy="315.521"
+              r="132.862"
+              transform="rotate(114.874 184.521 315.521)"
+              stroke="url(#paint4_linear_25:217)"
+            />
+            <circle
+              opacity="0.8"
+              cx="356"
+              cy="290"
+              r="179.5"
+              transform="rotate(-30 356 290)"
+           
