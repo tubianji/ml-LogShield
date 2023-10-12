@@ -37,4 +37,29 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        
+        </div>
+        <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
+          <svg
+            width="450"
+            height="556"
+            viewBox="0 0 450 556"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="277"
+              cy="63"
+              r="225"
+              fill="url(#paint0_linear_25:217)"
+            />
+            <circle
+              cx="17.9997"
+              cy="182"
+              r="18"
+              fill="url(#paint1_radial_25:217)"
+            />
+            <circle
+              cx="76.9997"
+              cy="288"
+              r="34"
+              fill="url(#paint2_ra
