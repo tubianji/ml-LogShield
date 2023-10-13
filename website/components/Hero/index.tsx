@@ -124,4 +124,19 @@ const Hero = () => {
                 cy="0"
                 r="1"
                 gradientUnits="userSpaceOnUse"
-             
+                gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
+              >
+                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+              </radialGradient>
+              <linearGradient
+                id="paint3_linear_25:217"
+                x1="226.775"
+                y1="-66.1548"
+                x2="292.157"
+                y2="351.421"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              </linearGradient>
