@@ -107,4 +107,21 @@ const Hero = () => {
                 <stop stopColor="#4A6CF7" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
-      
+              <radialGradient
+                id="paint1_radial_25:217"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
+              >
+                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+              </radialGradient>
+              <radialGradient
+                id="paint2_radial_25:217"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+             
