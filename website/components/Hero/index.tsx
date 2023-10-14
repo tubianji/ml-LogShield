@@ -140,3 +140,25 @@ const Hero = () => {
                 <stop stopColor="#4A6CF7" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
+              <linearGradient
+                id="paint4_linear_25:217"
+                x1="184.521"
+                y1="182.159"
+                x2="184.521"
+                y2="448.882"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint5_linear_25:217"
+                x1="356"
+                y1="110"
+                x2="356"
+                y2="470"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
+              </li
