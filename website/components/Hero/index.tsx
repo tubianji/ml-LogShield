@@ -161,4 +161,25 @@ const Hero = () => {
               >
                 <stop stopColor="#4A6CF7" />
                 <stop offset="1" stopColor="white" stopOpacity="0" />
-              </li
+              </linearGradient>
+              <linearGradient
+                id="paint6_linear_25:217"
+                x1="118.524"
+                y1="29.2497"
+                x2="166.965"
+                y2="338.63"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+          <svg
+            width="364"
+            height="201"
+            viewBox="0 0 364 201"
+            fill="none"
+            xmlns="h
