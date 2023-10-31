@@ -209,4 +209,25 @@ const Hero = () => {
               stroke="url(#paint4_linear_25:218)"
             />
             <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
-            <def
+            <defs>
+              <linearGradient
+                id="paint0_linear_25:218"
+                x1="184.389"
+                y1="69.2405"
+                x2="184.389"
+                y2="212.24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_25:218"
+                x1="156.389"
+                y1="69.2405"
+                x2="156.389"
+                y2="212.24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" stopOpacity="0" />
+                <stop 
