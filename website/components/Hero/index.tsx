@@ -230,4 +230,25 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_25:218"
+                x1="125.389"
+                y1="69.2405"
+                x2="125.389"
+                y2="212.24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_25:218"
+                x1="93.8507"
+                y1="67.2674"
+                x2="89.9278"
+                y2="210.214"
+                gradientUnits="userSpaceOnUse"
+              >
                 <stop 
