@@ -270,4 +270,18 @@ const Hero = () => {
                 cx="0"
                 cy="0"
                 r="1"
-                gradientUn
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(220 63) rotate(90) scale(43)"
+              >
+                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
+                <stop offset="1" stopColor="white" stopOpacity="0.08" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Hero;
