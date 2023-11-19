@@ -33,4 +33,19 @@ const Pricing = () => {
               Monthly
             </span>
             <div
-              onClick={() => 
+              onClick={() => setIsMonthly(!isMonthly)}
+              className="flex cursor-pointer items-center"
+            >
+              <div className="relative">
+                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
+                <div
+                  className={`${
+                    isMonthly ? "" : "translate-x-full"
+                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
+                >
+                  <span className="active h-4 w-4 rounded-full bg-white"></span>
+                </div>
+              </div>
+            </div>
+            <span
+              onClick={() => setIsMonthly(false
