@@ -48,4 +48,24 @@ const Pricing = () => {
               </div>
             </div>
             <span
-              onClick={() => setIsMonthly(false
+              onClick={() => setIsMonthly(false)}
+              className={`${
+                isMonthly
+                  ? "text-dark dark:text-white"
+                  : "pointer-events-none text-primary"
+              } ml-4 cursor-pointer text-base font-semibold`}
+            >
+              Yearly
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          <PricingBox
+            packageName="Lite"
+            price={isMonthly ? "40" : "120"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+          >
+            <OfferList text="All UI Components" status="active" />
+      
