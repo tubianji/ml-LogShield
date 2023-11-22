@@ -94,4 +94,27 @@ const Pricing = () => {
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use wi
+            <OfferList text="Use with Unlimited Projects" status="active" />
+            <OfferList text="Commercial Use" status="active" />
+            <OfferList text="Email Support" status="active" />
+            <OfferList text="Lifetime Access" status="active" />
+            <OfferList text="Free Lifetime Updates" status="active" />
+          </PricingBox>
+        </div>
+      </div>
+
+      <div className="absolute left-0 bottom-0 z-[-1]">
+        <svg
+          width="239"
+          height="601"
+          viewBox="0 0 239 601"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            opacity="0.3"
+            x="-184.451"
+            y="600.973"
+            width="196"
+            height="541.607"
+        
