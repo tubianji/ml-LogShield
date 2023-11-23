@@ -117,4 +117,28 @@ const Pricing = () => {
             y="600.973"
             width="196"
             height="541.607"
-        
+            rx="2"
+            transform="rotate(-128.7 -184.451 600.973)"
+            fill="url(#paint0_linear_93:235)"
+          />
+          <rect
+            opacity="0.3"
+            x="-188.201"
+            y="385.272"
+            width="59.7544"
+            height="541.607"
+            rx="2"
+            transform="rotate(-128.7 -188.201 385.272)"
+            fill="url(#paint1_linear_93:235)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_93:235"
+              x1="-90.1184"
+              y1="420.414"
+              x2="-90.1184"
+              y2="1131.65"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#4A6CF7" />
+              <st
