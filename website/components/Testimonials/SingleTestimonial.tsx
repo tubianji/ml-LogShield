@@ -37,4 +37,11 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
               {name}
             </h5>
             <p className="text-sm text-body-color">{designation}</p>
-          </d
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SingleTestimonial;
