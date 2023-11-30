@@ -38,4 +38,28 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available b
+          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          center
+        />
+
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          {testimonialData.map((testimonial) => (
+            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-5 right-0 z-[-1]">
+        <svg
+          width="238"
+          height="531"
+          viewBox="0 0 238 531"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            opacity="0.3"
+            x="422.819"
+            y="-70.8145"
+            width="196"
+            height="541.607"
+         
