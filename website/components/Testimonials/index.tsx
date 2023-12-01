@@ -86,4 +86,26 @@ const Testimonials = () => {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#4A6CF7" />
-   
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_83:2"
+              x1="455.327"
+              y1="-35.673"
+              x2="455.327"
+              y2="675.565"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#4A6CF7" />
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div className="absolute left-0 bottom-5 z-[-1]">
+        <svg
+          width="279"
+          height="106"
+          viewBox="0 0 279 106"
+          fill="none"
+          xmlns="http://www.w3.org/
