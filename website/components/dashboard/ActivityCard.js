@@ -24,4 +24,19 @@ const ActivityCard = () => {
                     <br></br>
                     {actions.map((action, index) => (
                         <tr key={index}>
-                            <td>{a
+                            <td>{action.user}</td>
+                            <td>{action.date}</td>
+                            <td className={styles.action}>{action.action}</td>
+                            <td className={action.response === 'Success' ? styles.success : styles.failed}>
+                                <div className={styles.dot}></div>
+                                {action.response}
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </Card>
+    );
+}
+
+export default ActivityCard;
