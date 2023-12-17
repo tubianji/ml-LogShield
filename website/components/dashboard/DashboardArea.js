@@ -51,4 +51,13 @@ const DashboardArea = () => {
                     </div>
                     <TopRow data={data} />
                     <br></br><br></br>
-                
+                    <div className={styles.row}>
+                        <ActivityCard data={data} />
+                    </div>
+                </div>
+        </div>
+    );
+};
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+export default DashboardArea;
