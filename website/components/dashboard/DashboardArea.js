@@ -27,4 +27,28 @@ const DashboardArea = () => {
 
             const data = results.map(result => result.data);
             setData(data);
-           
+            setTimeout(() => {
+                setLoading(false);
+            }, 3000);
+        }
+        fetchData();
+    }, []);
+
+    if (loading) {
+        return <LoadingBar />;
+    }
+
+    return (
+        <div className={styles.dashboardArea}>
+            <br></br><br></br><br></br><br></br>
+                <div key={"1"}>
+                    <Performance data={data} />
+                    <br></br><br></br>
+                    <div className={styles.row}>
+                        <LargestAttacks data={data} />
+                        <APICard data={data} />
+                        <NodeCard data={data} />
+                    </div>
+                    <TopRow data={data} />
+                    <br></br><br></br>
+                
