@@ -83,4 +83,20 @@ const LargestAttacks = ({ data }) => {
         options: options,
       });
     }
-  
+    return () => {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+    };
+  }, [chartRef, chartData, options]);
+
+  return (
+    <Card title="Requests Blocked:">
+      <div className={styles.chartContainer}>
+        <canvas ref={chartRef} />
+      </div>
+    </Card>
+  );
+};
+
+export default LargestAttacks;
