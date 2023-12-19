@@ -40,4 +40,47 @@ const LargestAttacks = ({ data }) => {
         fill: false,
         backgroundColor: 'transparent',
         borderColor: '#1c80d8',
-        pointBackgroundCo
+        pointBackgroundColor: '#1c80d8',
+        borderWidth: 2,
+        tension: 0.4,
+      },
+    ],
+  };
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+      x: {
+        type: 'category',
+      },
+    },
+    elements: {
+      point: {
+        radius: 4,
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+      },
+      tooltip: {
+        enabled: true,
+      },
+    },
+    maintainAspectRatio: false,
+  };
+
+  React.useEffect(() => {
+    if (chartRef.current) {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+      chartInstanceRef.current = new Chart(chartRef.current, {
+        type: 'line',
+        data: chartData,
+        options: options,
+      });
+    }
+  
