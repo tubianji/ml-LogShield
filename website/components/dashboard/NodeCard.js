@@ -24,4 +24,19 @@ const NodeCard = ({ data }) => {
                 {data && data.map((node, index) => (
                     <div key={index} className={styles.node}>
                         <span
-     
+                            className={styles.statusDot}
+                            style={{ backgroundColor: node.system.status === 'online' ? '#04d182' : '#da0000' }}
+                        />
+                        Node: {node.node}
+                        <FaSync className={styles.updateIcon} />
+                        <span>
+                            Uptime: {formatUptime(node.system.uptime)}
+                        </span>
+                        <button className={styles.viewButton} onClick={() => handleViewClick(node)}>View</button>
+                    </div>
+                ))}
+            </Card>
+            {selectedNode && (
+                <div>
+                    <h2>Selected Node Data:</h2>
+                    <pre>{JSON.stringify(selected
