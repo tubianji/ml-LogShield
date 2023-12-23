@@ -39,4 +39,11 @@ const NodeCard = ({ data }) => {
             {selectedNode && (
                 <div>
                     <h2>Selected Node Data:</h2>
-                    <pre>{JSON.stringify(selected
+                    <pre>{JSON.stringify(selectedNode, null, 2)}</pre>
+                </div>
+            )}
+        </div>
+    );
+}
+
+export default NodeCard;
