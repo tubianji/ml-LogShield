@@ -52,4 +52,24 @@ const Performance = () => {
       }
       chartInstanceRef.current = new Chart(chartRef.current, {
         type: 'line',
-        data: data
+        data: data,
+        options: options,
+      });
+    }
+    return () => {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+    };
+  }, [chartRef, data, options]);
+
+  return (
+    <Card title="Performance:">
+      <div className={styles.chartContainer}>
+        <canvas ref={chartRef} />
+      </div>
+    </Card>
+  );
+};
+
+export default Performance;
