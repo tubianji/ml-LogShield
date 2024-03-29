@@ -1,0 +1,9 @@
+.dashboardArea {
+    width: 100%;
+    padding: 20px;
+}
+
+.card-row {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: rep
