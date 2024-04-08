@@ -1,0 +1,4 @@
+.sidebar {
+    width: 240px;
+    height: calc(100vh - 110px);
+    background: linear-gradient(0deg, #3358f4
