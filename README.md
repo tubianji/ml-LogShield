@@ -25,4 +25,32 @@ Various environment variables utilized in the application are listed below:
 - WHITELISTED: Whitelisted IP addresses
 - Redis_Username: Redis database connection username
 - Redis_Password: Redis database connection password
-- Redis_Host: Redis database 
+- Redis_Host: Redis database host address
+- Redis_Port: Redis database port number
+- Session_Time: Session expiration time (in minutes)
+- Max_Requests: Maximum number of requests per minute
+- BlockDuration: IP blocking duration for rate limiting
+
+1. Installing
+
+```sh
+apt-get update && apt-get upgrade -y
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash -
+apt-get install -y nodejs nginx
+mkdir -p /etc/ml-logshield
+cd /etc/ml-logshield
+npm install
+cp example.env .env
+nano .env
+cp logshield.service /etc/systemd/system/logshield.service
+systemctl enable --now logshield
+```
+
+2. Updating
+
+```sh
+cd /etc/ml-logshield
+cp logshield.service /etc/systemd/system/logshield.service
+systemctl daemon-reload
+systemctl restart logshield
+```
